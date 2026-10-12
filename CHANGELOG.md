@@ -20,7 +20,7 @@ and this project adheres to Semantic Versioning (https://semver.org/spec/v2.0.0.
 ### Changed
 
 - `pcb step export` opens the solder mask for pads that sit only on mask or paste layers, and draws graphics on copper layers as copper, as KiCad does.
-- `pcb sync` reads only the manifests of direct dependencies and trusts the tree each one records. Dependencies whose manifest does not record a complete `[dependencies.indirect]` are no longer supported.
+- `pcb sync` selects versions from the manifests of direct dependencies only, trusting the tree each one records across `[dependencies]` and `[dependencies.indirect]`. Dependencies whose manifest does not record its complete tree are no longer supported.
 
 ## [0.4.76] - 2026-10-12
 
